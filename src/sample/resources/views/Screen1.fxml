@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.Screen1Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.java.controllers.Screen1Controller">
     <top>
         <VBox BorderPane.alignment="CENTER">
             <children>
@@ -21,7 +21,7 @@
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="New Window" />
+                                <MenuItem mnemonicParsing="false" onAction="#menuItem1" text="New Window" />
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem2" text="New File" />
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem3" text="Open File..." />
                                 <MenuItem mnemonicParsing="false" text="Open Folder..." />

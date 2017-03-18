@@ -1,4 +1,4 @@
-package main.java.services;
+package sample.java.services;
 
 import javafx.scene.control.TabPane;
 import javafx.stage.FileChooser;
