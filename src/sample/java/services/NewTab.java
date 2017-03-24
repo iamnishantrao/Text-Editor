@@ -12,19 +12,12 @@ public class NewTab {
 
     //For New File.
     public NewTab(TabPane tabPane) {
-        this("New File", "", tabPane);
-    }
-
-    //For Open File.
-    public NewTab(String fileName, String string, TabPane tabPane) {
         anchorPane.setTopAnchor(textArea, 0.0);
         anchorPane.setBottomAnchor(textArea, 0.0);
         anchorPane.setLeftAnchor(textArea, 0.0);
         anchorPane.setRightAnchor(textArea, 0.0);
 
-        Tab tab = new Tab(fileName, anchorPane);
+        Tab tab = new Tab("New File", anchorPane);
         tabPane.getTabs().add(tab);
-
-        textArea.setText(string);
     }
 }

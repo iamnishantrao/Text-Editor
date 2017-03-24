@@ -24,9 +24,9 @@
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem1" text="New Window" />
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem2" text="New File" />
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem3" text="Open File..." />
-                                <MenuItem mnemonicParsing="false" text="Open Folder..." />
+                                <MenuItem mnemonicParsing="false" onAction="#menuItem4" text="Open Folder..." />
                                 <SeparatorMenuItem mnemonicParsing="false" />
-                                <MenuItem mnemonicParsing="false" text="Save" />
+                                <MenuItem mnemonicParsing="false" onAction="#menuItem5" text="Save" />
                                 <MenuItem mnemonicParsing="false" text="Save As..." />
                                 <SeparatorMenuItem mnemonicParsing="false" />
                                 <MenuItem mnemonicParsing="false" onAction="#menuItem7" text="Close Tab" />
@@ -71,9 +71,9 @@
         <SplitPane dividerPositions="0.3" BorderPane.alignment="CENTER">
             <items>
                 <AnchorPane SplitPane.resizableWithParent="false">
-                    <children>
-                        <TreeView prefHeight="529.0" prefWidth="293.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                    </children>
+               <children>
+                  <TreeView fx:id="treeView" layoutX="48.0" layoutY="134.0" prefHeight="529.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
