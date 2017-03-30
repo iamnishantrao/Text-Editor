@@ -2,11 +2,11 @@ package sample.java.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.AnchorPane;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import sample.java.services.CreateTree;
 import sample.java.services.NewTab;
-import sample.java.services.OpenFile;
-import sample.java.services.OpenFolder;
 
 import java.io.File;
 
@@ -15,6 +15,8 @@ public class Screen1Controller {
     private TabPane tabPane;
     @FXML
     private TreeView<String> treeView;
+
+    private File file;
 
     //New Window menuItem.
     @FXML
@@ -31,19 +33,33 @@ public class Screen1Controller {
     //Open File menuItem.
     @FXML
     private void menuItem3() {
-        new OpenFile(tabPane, treeView);
+        FileChooser fileChooser = new FileChooser();
+        file = fileChooser.showOpenDialog(new Stage());
+
+        if (file == null) {
+
+        } else {
+            new CreateTree(file, tabPane, treeView);
+        }
     }
 
     //Open Folder menuItem.
     @FXML
     private void menuItem4() {
-        new OpenFolder(treeView);
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        file = directoryChooser.showDialog(new Stage());
+
+        //To handle cancel button in DirectoryChooser.
+        if (file == null) {
+
+        } else {
+            new CreateTree(file, tabPane, treeView);
+        }
     }
 
     //Save File menuItem.
     @FXML
     private void menuItem5() {
-
     }
 
     //Close Tab menuItem.
@@ -51,13 +67,5 @@ public class Screen1Controller {
     private void menuItem7() {
         Tab tab = tabPane.getSelectionModel().getSelectedItem();
         tabPane.getTabs().remove(tab);
-    }
-
-    public TabPane getTabPane() {
-        return tabPane;
-    }
-
-    public TreeView<String> getTreeView() {
-        return treeView;
     }
 }
